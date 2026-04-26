@@ -11,10 +11,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("✅ FidanAI aktif!\nSor bakalım 🔥")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # Fotoğraf geldiyse
     if update.message.photo:
-        await update.message.reply_text("📸 Fotoğraf aldım! Ne hakkında konuşmak istiyorsun?")
+        await update.message.reply_text("📸 Fotoğrafı gördüm! Ne sormak istiyorsun?")
         return
     
+    # Metin mesajı
     user_message = update.message.text
     
     headers = {
@@ -41,7 +43,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await update.message.reply_text(reply)
         else:
             await update.message.reply_text("Biraz bekle, tekrar dene.")
-    except Exception:
+    except:
         await update.message.reply_text("Hata oldu, tekrar dene.")
 
 if __name__ == "__main__":
