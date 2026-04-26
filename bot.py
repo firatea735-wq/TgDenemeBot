@@ -4,7 +4,7 @@ import requests
 import os
 
 # ================== BOT BİLGİLERİ ==================
-TELEGRAM_TOKEN = "8674149760:AAGP-gAoaM0UKGwMibeyKZyElpxUuQtZZKQ"
+TELEGRAM_TOKEN = "8674149760:AAEVp4BRF0q12IMrFnOVRWDWAp5W5r4zN1k"
 GROQ_API_KEY = "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"
 # ===================================================
 
